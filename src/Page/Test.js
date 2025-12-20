@@ -34,33 +34,33 @@ const journey = [
     year: "1981",
     title: "Turning the Tables",
     image: "https://images.unsplash.com/photo-1600952841320-db92ec4047ca?w=600",
-    text: "Balaji Wafers was born — not just a brand, but a promise. A promise of taste, joy, and moments shared over crunchy bites. ❤️",
+    text: "Agnipath Wafers was born — not just a brand, but a promise. A promise of taste, joy, and moments shared over crunchy bites. ❤️",
   },
   {
     year: "1990s",
     title: "Expansion Era",
     image: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=600",
-    text: "From one town to hundreds — the yellow packet became a symbol of happiness. Every shelf, every home, every picnic — Balaji was there.",
+    text: "From one town to hundreds — the yellow packet became a symbol of happiness. Every shelf, every home, every picnic — Agnipath was there.",
   },
   {
     year: "2000s",
     title: "National Presence",
     image: "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=600",
-    text: "From Gujarat to Goa, Delhi to Dibrugarh — Balaji became India’s snack companion. Not just a brand. A friend. 🇮🇳",
+    text: "From Gujarat to Goa, Delhi to Dibrugarh — Agnipath became India’s snack companion. Not just a brand. A friend. 🇮🇳",
   },
   {
     year: "Today",
     title: "Legacy Continues",
     image: "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=600",
-    text: "With state-of-the-art factories and the same old love, Balaji still makes snacks that bring families together. Because some stories never end — they just get crunchier. 😊",
+    text: "With state-of-the-art factories and the same old love, Agnipath still makes snacks that bring families together. Because some stories never end — they just get crunchier. 😊",
   },
 ];
 
 // Chip Packet Images 
 const chipImages = [
-  "https://www.balajiwafers.com/cdn/shop/files/Crunchem_Masala_Masti_Wafers_Default_bc03ebaa-4c86-4de2-977b-c25c873ade91.png?v=1749561574&width=1500", 
-  "https://www.balajiwafers.com/cdn/shop/files/Crunchem_Cream_Onion_Wafers_Default_4a89e1e3-54a9-4089-92de-c1ad75b11156.png?v=1746173853&width=1500",  
-  "https://www.balajiwafers.com/cdn/shop/files/Crunchem_Simply_Salted_Wafers_Default_8e769ddf-50ba-42f7-bc3e-0f283120e34e.png?v=1749474219&width=1500" 
+  "/image/wafar.png", 
+   "/image/BOXANGNIPATH.png" ,
+  "/image/masalachips.png" 
 ];
 
 // --- COMPONENTS ---
@@ -378,7 +378,7 @@ export default function BalajiJourney() {
       {/* Top Banner Image */}
       <div className="w-full h-[420px] md:h-[500px] overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1604909052743-94e838986d24?w=1600&q=80"
+          src="/image/topbanner.png"
           alt="Balaji Banner"
           className="w-full h-full object-cover"
         />
@@ -439,7 +439,7 @@ export default function BalajiJourney() {
             transform: scale(2);
             opacity: 0;
           }
-        }
+        }1
 
         html {
           scroll-behavior: smooth;

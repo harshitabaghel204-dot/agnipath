@@ -63,7 +63,7 @@ export default function Navbar() {
       hasDropdown: true,
       dropdownItems: [
         { name: 'Agnipath Journey ', href: '/Test' },
-        { name: 'How We Do it', href: '' },
+        { name: 'About us', href: '/aboutus' },
         
       ]
     },

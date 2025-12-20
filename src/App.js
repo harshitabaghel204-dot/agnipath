@@ -8,6 +8,7 @@ import Contact from "./Page/Contact";
 import BrandCampaigns from "./Page/BrandCampaigns";
 import Insights from "./Page/Insigths";
 import News from "./Page/News";
+import Aboutus from "./Page/Aboutus";
 function App() {
   
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/BrandCampaigns" element={<BrandCampaigns/>} />
            <Route path="/Insights" element={<Insights/>} />
            <Route path="/News" element={<News/>} />
+            <Route path="/aboutus" element={<Aboutus/>} />
       </Routes>
     </Router>
   );

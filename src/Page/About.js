@@ -2,96 +2,83 @@ import React, { useState } from "react";
 import Navbar from "../Component/Navbar";
 import Footer from "../Component/Footer";
 
-const WineProductsGrid = () => {
+const AgnipathProductsGrid = () => {
   const [hoveredProduct, setHoveredProduct] = useState(null);
 
   const products = [
     {
       id: 1,
       name: "Masala Masti Chips",
-      category: "Chips",
+      category: "Agnipath Snacks",
       price: "",
-      image:
-        "/image/masalachips.png",
-      
+      image: "/image/masalachips.png",
     },
     {
       id: 2,
-      name: "JARAMAN SHIRAZ",
-      category: "ESTATE LABEL",
-      price: "$35.00",
-      image:
-        "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&h=600&fit=crop",
-      
+      name: "Classic Spicy Chips",
+      category: "Agnipath Snacks",
+      price: "",
+      image: "/image/masalachips.png",
     },
     {
       id: 3,
-      name: "PINOT NOIR ROSÉ 2023",
-      category: "TAYLOR MADE",
-      price: "$28.00",
-      image:
-        "https://images.unsplash.com/photo-1586370434639-0fe43b2d32d6?w=400&h=600&fit=crop",
-      badges: []
+      name: "Premium Crunch Chips",
+      category: "Agnipath Premium",
+      price: "",
+      image: "/image/masalachips.png",
     },
     {
       id: 4,
-      name: "RESERVE SHIRAZ 2021",
-      category: "PREMIUM LABEL",
-      price: "$45.00",
-      image:
-        "https://images.unsplash.com/photo-1566754436611-f0a5de0b3d6c?w=400&h=600&fit=crop",
-      badges: []
+      name: "Hot & Crispy Chips",
+      category: "Agnipath Premium",
+      price: "",
+      image: "/image/masalachips.png",
     },
-     {
+    {
       id: 5,
       name: "Masala Masti Chips",
-      category: "Chips",
+      category: "Agnipath Snacks",
       price: "",
-      image:
-        "/image/masalachips.png",
-      
+      image: "/image/masalachips.png",
     },
     {
       id: 6,
-      name: "JARAMAN SHIRAZ",
-      category: "ESTATE LABEL",
-      price: "$35.00",
-      image:
-        "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&h=600&fit=crop",
-      
+      name: "Classic Spicy Chips",
+      category: "Agnipath Snacks",
+      price: "",
+      image: "/image/masalachips.png",
     },
     {
       id: 7,
-      name: "PINOT NOIR ROSÉ 2023",
-      category: "TAYLOR MADE",
-      price: "$28.00",
-      image:
-        "https://images.unsplash.com/photo-1586370434639-0fe43b2d32d6?w=400&h=600&fit=crop",
-      badges: []
+      name: "Premium Crunch Chips",
+      category: "Agnipath Premium",
+      price: "",
+      image: "/image/masalachips.png",
     },
     {
       id: 8,
-      name: "RESERVE SHIRAZ 2021",
-      category: "PREMIUM LABEL",
-      price: "$45.00",
-      image:
-        "https://images.unsplash.com/photo-1566754436611-f0a5de0b3d6c?w=400&h=600&fit=crop",
-      badges: []
+      name: "Hot & Crispy Chips",
+      category: "Agnipath Premium",
+      price: "",
+      image: "/image/masalachips.png",
     },
   ];
 
   return (
     <div className="min-h-screen bg-[#010317] font-sans">
-      {/* Header */}
-    <Navbar/>
-<div className="w-full h-72 md:h-80 overflow-hidden">
+      {/* Navbar */}
+      <Navbar />
+
+      {/* 🔥 AGNIPATH BANNER */}
+          <div className="w-full h-[320px] md:h-[300px] overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1604909052743-94e838986d24?w=1600&q=80"
+          src="/image/topbanner.png"
           alt="Balaji Banner"
           className="w-full h-full object-cover"
         />
       </div>
-      {/* GRID */}
+
+      {/* PRODUCTS GRID */}
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product) => (
@@ -101,26 +88,11 @@ const WineProductsGrid = () => {
               onMouseEnter={() => setHoveredProduct(product.id)}
               onMouseLeave={() => setHoveredProduct(null)}
             >
-              {/* CARD - Background stays same */}
-              <div className="bg-[radial-gradient(circle_at_center,rgba(200,163,87,0.12)_0%,transparent_70%)] p-4 rounded-xl border border-white/10">
+              {/* Card */}
+              <div className="bg-[radial-gradient(circle_at_center,rgba(200,163,87,0.12)_0%,transparent_70%)] p-4 rounded-xl border border-white/10 transition-all duration-300 hover:border-[#c8a357]/40">
 
-                {/* IMAGE CONTAINER */}
+                {/* Image */}
                 <div className="relative h-56 flex items-center justify-center mb-3">
-                  {/* Badges */}
-                  {product.badges && (
-                    <div className="absolute top-2 right-2 flex flex-col gap-1 z-10">
-                      {product.badges.map((badge, index) => (
-                        <div
-                          key={index}
-                          className="w-7 h-7 bg-[#c8a357] text-black rounded-full flex items-center justify-center text-xs font-bold"
-                        >
-                          {badge}
-                        </div>
-                      ))}
-                    </div>
-                  )}
-
-                  {/* Image - Only this moves up on hover */}
                   <img
                     src={product.image}
                     alt={product.name}
@@ -132,19 +104,21 @@ const WineProductsGrid = () => {
                   />
                 </div>
 
-                {/* INFO */}
+                {/* Info */}
                 <div className="text-center">
                   <p className="text-[11px] text-[#c8a357] uppercase tracking-wider mb-1">
                     {product.category}
                   </p>
 
-                  <h3 className="text-sm font-semibold text-white leading-tight mb-1 line-clamp-2">
+                  <h3 className="text-sm font-semibold text-white leading-tight mb-1">
                     {product.name}
                   </h3>
 
-                  <p className="text-sm font-medium text-[#c8a357]">
-                    {product.price}
-                  </p>
+                  {product.price && (
+                    <p className="text-sm font-medium text-[#c8a357]">
+                      {product.price}
+                    </p>
+                  )}
                 </div>
 
               </div>
@@ -152,9 +126,11 @@ const WineProductsGrid = () => {
           ))}
         </div>
       </div>
-      <Footer/>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
 
-export default WineProductsGrid;
+export default AgnipathProductsGrid;
