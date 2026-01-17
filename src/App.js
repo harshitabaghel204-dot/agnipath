@@ -26,9 +26,9 @@ function App() {
         <Route path="/Insights" element={<Insights />} />
         <Route path="/News" element={<News />} />
         <Route path="/aboutus" element={<Aboutus />} />
-          <Route path="/namkeen" element={<Namkeen/>} />
-             <Route path="/westernsnacks" element={<Westernsnacks/>} />
-              <Route path="/noodles" element={<Noodles/>} />
+        <Route path="/namkeen" element={<Namkeen/>} />
+        <Route path="/westernsnacks" element={<Westernsnacks/>} />
+        <Route path="/noodles" element={<Noodles/>} />
       </Routes>
     </Router>
   );
