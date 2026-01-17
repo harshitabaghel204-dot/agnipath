@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
 export default function BecomeDistributor() {
-  const [imageUrl, setImageUrl] = useState("image/wafar.png");
+  // const [imageUrl, setImageUrl] = useState("image/wafar.png");
+  const imageUrl = 'image/wafar.png'
 
   const benefits = [
     "High Profit Margins",

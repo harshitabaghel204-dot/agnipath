@@ -104,11 +104,11 @@ export default function Navbar() {
     
   ];
 
-  const topBarLinks = [
-    { name: 'Careers', href: '/careers' },
-    { name: 'FAQs', href: '/faqs' },
-    { name: 'Store Locator', href: '/store-locator' },
-  ];
+  // const topBarLinks = [
+  //   { name: 'Careers', href: '/careers' },
+  //   { name: 'FAQs', href: '/faqs' },
+  //   { name: 'Store Locator', href: '/store-locator' },
+  // ];
 
   return (
     <>

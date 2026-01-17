@@ -38,17 +38,17 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-white">About Us</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-[#d4af37] hover:text-white transition-colors text-sm">
+                <a href="/" className="text-[#d4af37] hover:text-white transition-colors text-sm">
                   Our Story
                 </a>
               </li>
               <li>
-                <a href="#" className="text-[#d4af37] hover:text-white transition-colors text-sm">
+                <a href="/" className="text-[#d4af37] hover:text-white transition-colors text-sm">
                   Careers
                 </a>
               </li>
               <li>
-                <a href="#" className="text-[#d4af37] hover:text-white transition-colors text-sm">
+                <a href="/" className="text-[#d4af37] hover:text-white transition-colors text-sm">
                   Contact Us
                 </a>
               </li>
@@ -60,22 +60,22 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-white">Agnipath Rewards</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-[#d4af37] hover:text-white transition-colors text-sm">
+                <a href="/" className="text-[#d4af37] hover:text-white transition-colors text-sm">
                   How it works
                 </a>
               </li>
               <li>
-                <a href="#" className="text-[#d4af37] hover:text-white transition-colors text-sm">
+                <a href="/" className="text-[#d4af37] hover:text-white transition-colors text-sm">
                   Benefits
                 </a>
               </li>
               <li>
-                <a href="#" className="text-[#d4af37] hover:text-white transition-colors text-sm">
+                <a href="/" className="text-[#d4af37] hover:text-white transition-colors text-sm">
                   Redeem Points
                 </a>
               </li>
               <li>
-                <a href="#" className="text-[#d4af37] hover:text-white transition-colors text-sm">
+                <a href="/" className="text-[#d4af37] hover:text-white transition-colors text-sm">
                   FAQs
                 </a>
               </li>
@@ -87,22 +87,22 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-white">Shop</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-[#d4af37] hover:text-white transition-colors text-sm">
+                <a href="/" className="text-[#d4af37] hover:text-white transition-colors text-sm">
                   Wafer
                 </a>
               </li>
               <li>
-                <a href="#" className="text-[#d4af37] hover:text-white transition-colors text-sm">
+                <a href="/" className="text-[#d4af37] hover:text-white transition-colors text-sm">
                   Namkeen
                 </a>
               </li>
               <li>
-                <a href="#" className="text-[#d4af37] hover:text-white transition-colors text-sm">
+                <a href="/" className="text-[#d4af37] hover:text-white transition-colors text-sm">
                   Western Snacks
                 </a>
               </li>
               <li>
-                <a href="#" className="text-[#d4af37] hover:text-white transition-colors text-sm">
+                <a href="/" className="text-[#d4af37] hover:text-white transition-colors text-sm">
                   Offers
                 </a>
               </li>
@@ -113,16 +113,16 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Follow Us</h3>
             <div className="flex items-center gap-4">
-              <a href="#" className="text-white hover:text-[#d4af37] transition-colors" aria-label="Facebook">
+              <a href="/" className="text-white hover:text-[#d4af37] transition-colors" aria-label="Facebook">
                 <Facebook size={28} />
               </a>
-              <a href="#" className="text-white hover:text-[#d4af37] transition-colors" aria-label="Instagram">
+              <a href="/" className="text-white hover:text-[#d4af37] transition-colors" aria-label="Instagram">
                 <Instagram size={28} />
               </a>
-              <a href="#" className="text-white hover:text-[#d4af37] transition-colors" aria-label="YouTube">
+              <a href="/" className="text-white hover:text-[#d4af37] transition-colors" aria-label="YouTube">
                 <Youtube size={28} />
               </a>
-              <a href="#" className="text-white hover:text-[#d4af37] transition-colors" aria-label="Twitter">
+              <a href="/" className="text-white hover:text-[#d4af37] transition-colors" aria-label="Twitter">
                 <Twitter size={28} />
               </a>
             </div>
@@ -134,19 +134,19 @@ export default function Footer() {
       <div className="border-t border-gray-700">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex flex-wrap justify-center items-center gap-3 text-xs text-white">
-            <a href="#" className="hover:text-[#d4af37] transition-colors">
+            <a href="/" className="hover:text-[#d4af37] transition-colors">
               Terms of Use
             </a>
             <span className="text-gray-600">|</span>
-            <a href="#" className="hover:text-[#d4af37] transition-colors">
+            <a href="/" className="hover:text-[#d4af37] transition-colors">
               Privacy Policy
             </a>
             <span className="text-gray-600">|</span>
-            <a href="#" className="hover:text-[#d4af37] transition-colors">
+            <a href="/" className="hover:text-[#d4af37] transition-colors">
               Cookies Policy
             </a>
             <span className="text-gray-600">|</span>
-            <a href="#" className="hover:text-[#d4af37] transition-colors">
+            <a href="/" className="hover:text-[#d4af37] transition-colors">
               Replacement & Cancellation Policy
             </a>
           </div>

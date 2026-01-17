@@ -15,7 +15,7 @@ export default function ImageSlider() {
       setCurrent((p) => (p + 1) % images.length);
     }, 4000);
     return () => clearInterval(timer);
-  }, []);
+  }, [images.length]);
 
   return (
     <div className="relative w-full overflow-hidden ">

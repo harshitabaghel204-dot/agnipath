@@ -63,7 +63,7 @@ const GameSlider = () => {
       setActiveIndex((prev) => (prev + 1) % products.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [products.length]);
 
   /* CENTER ACTIVE CARD */
   useEffect(() => {
