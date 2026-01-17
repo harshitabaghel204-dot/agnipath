@@ -219,13 +219,13 @@ export default function SpiceParallax() {
   // ==================== MOBILE CONFIG ====================
   const mobileSections = [
     {
-      bgImage: "/image/image1.png",
+      bgImage: "/image/mobile6.png",
       items: [
         { image: "/image/sliderelachi.png", left: "50%", top: "40%", maxWidth: "120px" },
       ],
     },
     {
-      bgImage: "/image/mobileimage2.png",
+      bgImage: "/image/mobile7.png",
       items: [
         {
           image: "https://static.vecteezy.com/system/resources/thumbnails/036/161/016/small/ai-generated-oil-drops-or-serum-droplet-gold-on-a-transparent-background-free-png.png",
@@ -236,19 +236,19 @@ export default function SpiceParallax() {
       ],
     },
     {
-      bgImage: "/image/mobileig3.png",
+      bgImage: "/image/mobile8.png",
       items: [
         { image: "/image/rosepatti.png", left: "50%", top: "45%", maxWidth: "120px" },
       ],
     },
     {
-      bgImage: "/image/mobileig4.png",
+      bgImage: "/image/mobile9.png",
       items: [
         { image: "/image/Ruhkewda.png", left: "50%", top: "45%", maxWidth: "120px" },
       ],
     },
     {
-      bgImage: "/image/mobileig5.png",
+      bgImage: "/image/mobile10.png",
       items: [
         { image: "/image/Clovesone.png", left: "50%", top: "45%", maxWidth: "120px" },
       ],

@@ -8,88 +8,61 @@ const AgnipathProductsGrid = () => {
   const products = [
     {
       id: 1,
-      name: "ChilliTadka Chips",
-      category: "Agnipath Snacks",
+      name: "Chataka Pataka Masala Masti",
+      category: "Agnipath Western Snacks",
       price: "",
-      image: "/image/ChilliTadka.png",
+      image: "/image/ChatakaPatakaMasalaMasti.png",
     },
     {
       id: 2,
-      name: "Masala Masti Chips",
-      category: "Agnipath Snacks",
+      name: "Wheelos Masala",
+      category: "Agnipath Western Snacks",
       price: "",
-      image: "/image/masalachips.png",
+      image: "/image/WheelosMasala.png",
     },
     {
       id: 3,
-      name: "Chaat Chaska Chips",
-      category: "Agnipath Premium",
+      name: "Amaize Cheese Chilli Nachos",
+      category: "Agnipath Western Snacks",
       price: "",
-      image: "/image/ChaatChaska.png",
+      image: "/image/AmaizeCheeseChilliNachos.png",
     },
     {
       id: 4,
-      name: "Cream & Onion Chips",
-      category: "Agnipath Premium",
+      name: "Gippi opRings CheeseC hilli",
+      category: "Agnipath Western Snacks",
       price: "",
-      image: "/image/CreamOnion.png",
+      image: "/image/GippiPopRingsCheeseChilli.png",
     },
     {
       id: 5,
-      name: "Banana Wafers Chips",
-      category: "Agnipath Snacks",
+      name: "Gippi PopRings Masala",
+      category: "Agnipath Western Snacks",
       price: "",
-      image: "/image/BananaWafers.png",
+      image: "/image/GippiPopRingsMasala.png",
     },
     {
       id: 6,
-      name: "Rumbles Pudina Twist Chips",
-      category: "Agnipath Snacks",
+      name: "Amaize Flamin HotNachos ",
+      category: "Agnipath Western Snacks",
       price: "",
-      image: "/image/RumblesPudinaTwist.png",
+      image: "/image/AmaizeFlaminHotNachos.png",
     },
     {
       id: 7,
-      name: "Crunchem Peri Peri Chips",
-      category: "Agnipath Premium",
+      name: "Chataka Pataka Tangy omato",
+      category: "Agnipath Western Snacks",
       price: "",
-      image: "/image/CrunchemPeriPeri.png",
+      image: "/image/ChatakaPatakaTangyTomato.png",
     },
     {
       id: 8,
-      name: "Crunchex Chilli Lemon Chips",
-      category: "Agnipath Premium",
+      name: "Yumstix",
+      category: "Agnipath Western Snacks",
       price: "",
-      image: "/image/CrunchexChilliLemon.png",
+      image: "/image/Yumstix.png",
     },
-    {
-      id: 9,
-      name: "Crunchem Simply Salted Chips",
-      category: "Agnipath Premium",
-      price: "",
-      image: "/image/CrunchemSimplySalted.png",
-    },
-    {
-      id: 10,
-      name: "Crunchem Pizzy Masala Chips",
-      category: "Agnipath Snacks",
-      price: "",
-      image: "/image/CrunchemPizzyMasala.png",
-    },
-    {
-      id: 11,
-      name: "Crunchex Simply Salted Chips",
-      category: "Agnipath Snacks",
-      price: "",
-      image: "/image/CrunchexSimplySalted.png",
-    },
-    {
-      id: 12,
-      name: "Crunchem Tomato Twist Chips",
-      category: "Agnipath Premium",
-      price: "",
-      image: "/image/CrunchemTomatoTwist.png",
-    },
+   
   ];
 
   return (
@@ -100,7 +73,7 @@ const AgnipathProductsGrid = () => {
       {/* 🔥 AGNIPATH BANNER */}
         <div className="w-full overflow-hidden">
   <img
-    src="/image/TOPCHIPS.jpeg"
+    src="/image/topsnaks.png"
     alt="Balaji Banner"
     className="
       w-full

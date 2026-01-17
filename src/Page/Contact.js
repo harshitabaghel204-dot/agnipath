@@ -18,7 +18,7 @@ const LetsConnect = () => {
         {/* Banner */}
         <div className="w-full h-64 sm:h-72 md:h-80 overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1604909052743-94e838986d24?w=1600&q=80"
+            src="/image/CONTACTTOP.png"
             alt="Agnipath Banner"
             className="w-full h-full object-cover"
           />

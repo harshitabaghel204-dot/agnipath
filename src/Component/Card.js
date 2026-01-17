@@ -10,29 +10,50 @@ const GameSlider = () => {
       id: 1,
       title: "Agnipath Wafers",
       description:
-        "Crispy aur light wafers jo har bite me perfect crunch aur taste dete hain.",
+        "",
       image: "/image/wafar.png",
     },
     {
       id: 2,
       title: "Agnipath Masala Chips",
       description:
-        "Chatpata masala aur zabardast crunch – har snack time ka hero.",
+        "",
       image: "/image/masalachips.png",
     },
     {
       id: 3,
       title: "Agnipath Combo Box",
       description:
-        "Multiple flavours ek hi box me – family aur parties ke liye perfect.",
+        "",
       image: "/image/BOXANGNIPATH.png",
     },
     {
       id: 4,
+      title: "Agnipath Special Namkeen",
+      description:
+        "",
+      image: "/image/ClassicSeve.png",
+    },
+    {
+      id: 5,
       title: "Agnipath Special Snacks",
       description:
-        "Premium taste aur quality ke saath Agnipath ka signature flavour.",
-      image: "/image/BOXANGNIPATH.png",
+        "",
+      image: "/image/ChilliTadka.png",
+    },
+    {
+      id: 6,
+      title: "Agnipath Western Snacks",
+      description:
+        "",
+      image: "/image/WheelosMasala.png",
+    },
+    {
+      id: 7,
+      title: "Agnipath Noodles",
+      description:
+        "",
+      image: "/image/noodles.png",
     },
   ];
 

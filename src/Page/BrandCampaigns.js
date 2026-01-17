@@ -31,15 +31,17 @@ const NoodlesGrid = () => {
         "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&h=300&fit=crop",
       badge: "Tastefully Hot",
       title: "Agnipath | Hot Bites – Masaledar Zindagi",
-      hasVideo: false,
+        hasVideo: true,
+      videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     },
     {
       id: 4,
       image:
-        "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=400&h=300&fit=crop",
+        "/image/snacksetop.png",
       badge: "Tastefully Hot",
       title: "Agnipath | Noodles Se Zyada Masaledar",
-      hasVideo: false,
+         hasVideo: true,
+      videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     },
   ];
 
@@ -50,7 +52,7 @@ const NoodlesGrid = () => {
       {/* ✅ AGNIPATH BANNER */}
            <div className="w-full h-[320px] md:h-[300px] overflow-hidden">
         <img
-          src="/image/topbanner.png"
+          src="/image/topsnaks.png"
           alt="Balaji Banner"
           className="w-full h-full object-cover"
         />

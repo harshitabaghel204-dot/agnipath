@@ -18,7 +18,7 @@ export default function ImageSlider() {
   }, []);
 
   return (
-    <div className="relative w-full overflow-hidden rounded-xl">
+    <div className="relative w-full overflow-hidden ">
 
       <div
         className="flex transition-transform duration-700 ease-in-out"

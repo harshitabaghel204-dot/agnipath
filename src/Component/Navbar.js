@@ -73,8 +73,9 @@ export default function Navbar() {
       hasDropdown: true,
       dropdownItems: [
         { name: 'Wafer', href: '/about' },
-        { name: 'Namkeen ', href: '/about' },
-        { name: 'Western Snaks ', href: '/about' },
+        { name: 'Namkeen ', href: '/namkeen' },
+        { name: 'Western Snaks ', href: '/westernsnacks' },
+            { name: 'Noodles ', href: '/noodles' },
       ]
     },
     
@@ -234,24 +235,24 @@ export default function Navbar() {
             {/* Right Side Actions */}
             <div className="flex items-center gap-2 md:gap-3">
               {/* Search Button - Desktop */}
-              <button className="hidden md:flex w-10 h-10 items-center justify-center rounded-full hover:bg-white/10 transition-colors text-white hover:text-[#c8a357]">
+              {/* <button className="hidden md:flex w-10 h-10 items-center justify-center rounded-full hover:bg-white/10 transition-colors text-white hover:text-[#c8a357]">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
-              </button>
+              </button> */}
 
               {/* Cart Button */}
-              <button className="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors text-white hover:text-[#c8a357]">
+              {/* <button className="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors text-white hover:text-[#c8a357]">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                 </svg>
                 <span className="absolute -top-1 -right-1 w-5 h-5 bg-[#c8a357] text-black text-xs rounded-full flex items-center justify-center font-bold">
                   3
                 </span>
-              </button>
+              </button> */}
 
               {/* CTA Button - Desktop */}
-              <a 
+              {/* <a 
                 href="/shop"
                 className="hidden md:flex items-center gap-2 bg-gradient-to-r from-[#c8a357] to-[#a88a3d] text-black px-5 py-2.5 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-[#c8a357]/30 transition-all duration-300 hover:scale-105"
               >
@@ -259,7 +260,7 @@ export default function Navbar() {
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </a>
+              </a> */}
 
               {/* Mobile Menu Toggle */}
               <button
@@ -310,7 +311,7 @@ export default function Navbar() {
             }`}
           >
             {/* Mobile Search */}
-            <div className="p-4 border-b border-gray-800">
+            {/* <div className="p-4 border-b border-gray-800">
               <div className="relative">
                 <input
                   type="text"
@@ -321,7 +322,7 @@ export default function Navbar() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
               </div>
-            </div>
+            </div> */}
 
             {/* Mobile Menu Items */}
             <div className="p-4">
@@ -380,7 +381,7 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Quick Links */}
-            <div className="p-4 bg-gray-900 border-t border-gray-800">
+            {/* <div className="p-4 bg-gray-900 border-t border-gray-800">
               <p className="text-xs text-gray-500 uppercase tracking-wider mb-3">Quick Links</p>
               <div className="flex flex-wrap gap-2">
                 {topBarLinks.map((link) => (
@@ -394,10 +395,10 @@ export default function Navbar() {
                   </a>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {/* Mobile CTA */}
-            <div className="p-4 border-t border-gray-800">
+            {/* <div className="p-4 border-t border-gray-800">
               <a 
                 href="/shop"
                 className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-[#c8a357] to-[#a88a3d] text-black py-3.5 rounded-xl text-base font-bold hover:shadow-lg hover:shadow-[#c8a357]/30 transition-all"
@@ -408,7 +409,7 @@ export default function Navbar() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </a>
-            </div>
+            </div> */}
 
             {/* Mobile Contact */}
             <div className="p-4 bg-white text-black">

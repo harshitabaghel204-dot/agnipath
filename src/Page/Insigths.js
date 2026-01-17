@@ -9,7 +9,7 @@ const FreshTakesBlog = () => {
       id: 1,
       category: "Snacks",
       image:
-        "https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=600&h=400&fit=crop",
+        "/image/topsnaks.png",
       title:
         "From Local Roots to National Fame: The Crunchy Journey of Agnipath Snacks",
       description:
@@ -21,7 +21,7 @@ const FreshTakesBlog = () => {
       id: 2,
       category: "New Trends",
       image:
-        "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=400&h=300&fit=crop",
+        "/image/topinsigth.png",
       title: "Snack Like a Pro: Why Agnipath Snacks Are a Must-Have",
       description:
         "Explore what makes Agnipath Snacks stand out in today’s competitive snack market.",
@@ -43,7 +43,7 @@ const FreshTakesBlog = () => {
       id: 4,
       category: "Lifestyle",
       image:
-        "https://images.unsplash.com/photo-1613564834361-9436948817d1?w=400&h=300&fit=crop",
+        "/image/topsnaks.png",
       title: "Everyday Snacking Made Better with Agnipath",
       description:
         "Why Agnipath Snacks are becoming a daily favorite for families across India.",
@@ -54,7 +54,7 @@ const FreshTakesBlog = () => {
       id: 5,
       category: "Snacks",
       image:
-        "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=400&h=400&fit=crop",
+        "/image/snacksetop.png",
       title: "How Agnipath Became a Trusted Name in Snacks",
       description:
         "Consistency, quality, and taste—discover the pillars behind Agnipath’s success.",
@@ -70,7 +70,7 @@ const FreshTakesBlog = () => {
       {/* Banner */}
           <div className="w-full h-[320px] md:h-[300px] overflow-hidden">
         <img
-          src="/image/topbanner.png"
+          src="/image/topinsigth.png"
           alt="Balaji Banner"
           className="w-full h-full object-cover"
         />
