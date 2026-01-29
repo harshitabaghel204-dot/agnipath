@@ -219,6 +219,12 @@ export default function SpiceParallax() {
   // ==================== MOBILE CONFIG ====================
   const mobileSections = [
     {
+      bgImage: "/image/betelnut.png",
+      items: [
+        { image: "/image/beluntimage.png", left: "50%", top:"40%", maxWidth: "80px" },
+      ],
+    },
+    {
       bgImage: "/image/mobile6.png",
       items: [
         { image: "/image/sliderelachi.png", left: "50%", top: "40%", maxWidth: "120px" },
@@ -231,26 +237,32 @@ export default function SpiceParallax() {
           image: "https://static.vecteezy.com/system/resources/thumbnails/036/161/016/small/ai-generated-oil-drops-or-serum-droplet-gold-on-a-transparent-background-free-png.png",
           left: "50%",
           top: "40%",
-          maxWidth: "120px",
+          maxWidth: "110px",
         },
       ],
     },
     {
       bgImage: "/image/mobile8.png",
       items: [
-        { image: "/image/rosepatti.png", left: "50%", top: "45%", maxWidth: "120px" },
+        { image: "/image/rosepatti.png", left: "50%", top: "45%", maxWidth: "80px" },
       ],
     },
     {
-      bgImage: "/image/mobile9.png",
+      bgImage: "/image/mobileruh.png",
       items: [
-        { image: "/image/Ruhkewda.png", left: "50%", top: "45%", maxWidth: "120px" },
+        { image: "/image/Ruhkewda.png", left: "50%", top: "45%", maxWidth: "100px" },
+      ],
+    },
+     {
+      bgImage: "/image/katthaimage.png",
+      items: [
+        { image: "/image/katthamo.png", left: "50%", top: "42%", maxWidth: "90px" },
       ],
     },
     {
       bgImage: "/image/mobile10.png",
       items: [
-        { image: "/image/Clovesone.png", left: "50%", top: "45%", maxWidth: "120px" },
+        { image: "/image/Clovesone.png", left: "50%", top: "45%", maxWidth: "90px" },
       ],
     },
     {
@@ -298,6 +310,12 @@ export default function SpiceParallax() {
         { image: "/image/Ruhkewda.png", left: "50%", top: "42%", maxWidth: "130px" },
       ],
     },
+     {
+      bgImage: "/image/katthaimage.png",
+      items: [
+        { image: "/image/katthamo.png", left: "50%", top: "42%", maxWidth: "150px" },
+      ],
+    },
     {
       bgImage: "/image/cloves1.png",
       items: [
@@ -320,12 +338,21 @@ export default function SpiceParallax() {
 
   // ==================== DESKTOP CONFIG ====================
   const desktopSections = [
+
+
+    {
+      bgImage: "/image/belslider.png",
+      items: [
+        { image: "/image/beluntimage.png", left: "50%", top: "18%", maxWidth: "100px" },
+      ],
+    },
     {
       bgImage: "/image/image7.png",
       items: [
         { image: "/image/sliderelachi.png", left: "50%", top: "18%", maxWidth: "150px" },
       ],
     },
+    
     {
       bgImage: "/image/oil1.png",
       items: [
@@ -347,6 +374,12 @@ export default function SpiceParallax() {
       bgImage: "/image/ruh.png",
       items: [
         { image: "/image/Ruhkewda.png", left: "50%", top: "42%", maxWidth: "150px" },
+      ],
+    },
+     {
+      bgImage: "/image/katthaimage.png",
+      items: [
+        { image: "/image/katthamo.png", left: "50%", top: "42%", maxWidth: "150px" },
       ],
     },
     {

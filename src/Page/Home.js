@@ -14,10 +14,12 @@ const Home = () => {
     <>
      <Navbar/>
  <Slider/>
- <About/>
+ 
  <Card/>
+ <About/>
+ <Test/>
 <Itemslider/>
-<Test/>
+
 
 <Footer/>
 

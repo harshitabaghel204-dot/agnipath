@@ -3,9 +3,11 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function ImageSlider() {
   const images = [
-    "/image/Banner.png",
+    "/image/banner5.png",
     "/image/Banner2.png",
     "/image/bannner3.png",
+    "/image/banner4.png",
+    "/image/banner.png",
   ];
 
   const [current, setCurrent] = useState(0);
@@ -32,10 +34,10 @@ export default function ImageSlider() {
             className="
               w-full flex-shrink-0 object-cover
 
-              h-[220px]
-              sm:h-[320px]
-              md:h-[480px]
-              lg:h-[650px]
+              h-[200px]
+              sm:h-[220px]
+              md:h-[380px]
+              lg:h-[500px]
 
               object-center
               sm:object-[50%_50%]
