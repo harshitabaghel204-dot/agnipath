@@ -219,7 +219,7 @@ export default function SpiceParallax() {
   // ==================== MOBILE CONFIG ====================
   const mobileSections = [
     {
-      bgImage: "/image/betelnut.png",
+      bgImage: "/image/betelnut_290x250.png",
       items: [
         { image: "/image/beluntimage.png", left: "50%", top:"40%", maxWidth: "80px" },
       ],

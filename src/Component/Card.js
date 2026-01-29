@@ -559,12 +559,156 @@
 //     </div>
 //   );
 // }
+// import { useState, useEffect, useRef } from "react";
+
+// export default function App() {
+//   const [activeIndex, setActiveIndex] = useState(0);
+//   const [isMobile, setIsMobile] = useState(false);
+//   const containerRef = useRef(null);
+
+//   const products = [
+//     { id: 1, name: "Agnipath Pan Masala Pack", category: "Agnipath", image: "/image/wafar.png" },
+//     { id: 2, name: "Agnipath Pan Masala Can", category: "Agnipath", image: "/image/BOXANGNIPATH.png" },
+//     { id: 3, name: "Agnipath Pan Masala Pack", category: "Agnipath", image: "/image/wafar.png" },
+//   ];
+
+//   useEffect(() => {
+//     const checkMobile = () => setIsMobile(window.innerWidth < 1024);
+//     checkMobile();
+//     window.addEventListener("resize", checkMobile);
+//     return () => window.removeEventListener("resize", checkMobile);
+//   }, []);
+
+//   // Auto slide logic
+//   useEffect(() => {
+//     if (!isMobile) return;
+//     const interval = setInterval(() => {
+//       setActiveIndex((prev) => (prev + 1) % products.length);
+//     }, 3500);
+//     return () => clearInterval(interval);
+//   }, [isMobile, products.length]);
+
+//   // Scroll to active card logic
+//   useEffect(() => {
+//     if (!isMobile || !containerRef.current) return;
+//     const container = containerRef.current;
+//     const card = container.children[activeIndex];
+//     if (card) {
+//       container.scrollTo({
+//         left: card.offsetLeft,
+//         behavior: "smooth",
+//       });
+//     }
+//   }, [activeIndex, isMobile]);
+
+//   return (
+//     <div className="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 py-3 lg:py-8 lg:min-h-screen">
+//       {/* Section Title */}
+//       <div className="max-w-7xl mx-auto px-4 text-center mb-12">
+//         <h1 className="text-3xl sm:text-5xl font-bold text-white mb-4">
+//           Our <span className="bg-gradient-to-r from-[#c8a357] via-yellow-500 to-[#c8a357] bg-clip-text text-transparent">Exclusive Products</span>
+//         </h1>
+//         <div className="h-1 w-24 bg-[#c8a357] mx-auto rounded-full"></div>
+//       </div>
+
+//       {/* MOBILE VIEW: 1 Card at a time Auto-Slider */}
+//       <div className="lg:hidden relative overflow-hidden">
+//         <div
+//           ref={containerRef}
+//           className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide"
+//           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+//         >
+//           <style>{`.scrollbar-hide::-webkit-scrollbar { display: none; }`}</style>
+          
+//           {products.map((product, index) => (
+//             <div
+//               key={product.id}
+//               className="w-full flex-shrink-0 snap-center px-6 transition-all duration-500"
+//               onClick={() => setActiveIndex(index)}
+//             >
+//               <ProductCard 
+//                 product={product} 
+//                 isActive={index === activeIndex} 
+//                 isMobile={true} 
+//               />
+//             </div>
+//           ))}
+//         </div>
+
+//         {/* Dots Indicator */}
+//         <div className="flex justify-center gap-2 mt-8">
+//           {products.map((_, index) => (
+//             <button
+//               key={index}
+//               onClick={() => setActiveIndex(index)}
+//               className={`h-2 rounded-full transition-all duration-300 ${
+//                 activeIndex === index ? "bg-[#c8a357] w-8" : "bg-gray-600 w-2"
+//               }`}
+//             />
+//           ))}
+//         </div>
+//       </div>
+
+//       {/* DESKTOP VIEW */}
+//       <div className="hidden lg:flex flex-wrap justify-center gap-10 max-w-7xl mx-auto px-8">
+//         {products.map((product) => (
+//           <div
+//             key={product.id}
+//             className="w-[360px]"
+//           >
+//             <ProductCard 
+//               product={product} 
+//               isActive={true}
+//               isDesktop={true} 
+//             />
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
+
+// function ProductCard({ product, isActive, isMobile }) {
+//   return (
+//     <div className={`relative h-full overflow-hidden rounded-3xl border transition-all duration-700 ${
+//       isActive 
+//         ? "border-[#c8a357] bg-white/10 shadow-2xl shadow-[#c8a357]/20 scale-100" 
+//         : "border-[#c8a357]/10 bg-white/5 scale-95 opacity-60"
+//     } p-8`}>
+      
+//       {/* Image */}
+//       <div className={`relative flex items-center justify-center mb-6 ${isMobile ? 'h-64' : 'h-80'}`}>
+//         <img
+//           src={product.image}
+//           alt={product.name}
+//           className={`max-w-full max-h-full object-contain transition-all duration-700 ${
+//             isActive ? "scale-100" : "scale-90"
+//           }`}
+//         />
+//       </div>
+
+//       {/* Content */}
+//       <div className="text-center relative z-10">
+//         <span className="inline-block text-[10px] font-bold text-[#c8a357] uppercase tracking-widest px-3 py-1 bg-[#c8a357]/10 rounded-full mb-3">
+//           {product.category}
+//         </span>
+//         <h3 className="text-xl font-bold text-white mb-4">{product.name}</h3>
+//         <div className={`h-1 bg-[#c8a357] mx-auto rounded-full transition-all duration-500 ${
+//           isActive ? "w-16" : "w-0"
+//         }`}></div>
+//       </div>
+//     </div>
+//   );
+// }
+
 import { useState, useEffect, useRef } from "react";
 
 export default function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [isUserInteracting, setIsUserInteracting] = useState(false);
   const containerRef = useRef(null);
+  const interactionTimerRef = useRef(null);
 
   const products = [
     { id: 1, name: "Agnipath Pan Masala Pack", category: "Agnipath", image: "/image/wafar.png" },
@@ -579,14 +723,16 @@ export default function App() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  // Auto slide logic
+  // Auto slide logic - stops when user interacts
   useEffect(() => {
-    if (!isMobile) return;
+    if (!isMobile || isUserInteracting) return;
+    
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % products.length);
     }, 3500);
+    
     return () => clearInterval(interval);
-  }, [isMobile, products.length]);
+  }, [isMobile, isUserInteracting, products.length]);
 
   // Scroll to active card logic
   useEffect(() => {
@@ -601,14 +747,38 @@ export default function App() {
     }
   }, [activeIndex, isMobile]);
 
+  // Handle user interaction
+  const handleUserInteraction = () => {
+    setIsUserInteracting(true);
+    
+    // Clear existing timer
+    if (interactionTimerRef.current) {
+      clearTimeout(interactionTimerRef.current);
+    }
+    
+    // Resume auto-slide after 5 seconds of no interaction
+    interactionTimerRef.current = setTimeout(() => {
+      setIsUserInteracting(false);
+    }, 5000);
+  };
+
+  const handleDotClick = (index) => {
+    setActiveIndex(index);
+    handleUserInteraction();
+  };
+
+  const handleScroll = () => {
+    handleUserInteraction();
+  };
+
   return (
-    <div className="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 py-3 lg:py-8 lg:min-h-screen">
+    <div className="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 py-6 lg:py-8 lg:min-h-screen">
       {/* Section Title */}
-      <div className="max-w-7xl mx-auto px-4 text-center mb-12">
-        <h1 className="text-3xl sm:text-5xl font-bold text-white mb-4">
+      <div className="max-w-7xl mx-auto px-4 text-center mb-8 lg:mb-12">
+        <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-white mb-3 lg:mb-4">
           Our <span className="bg-gradient-to-r from-[#c8a357] via-yellow-500 to-[#c8a357] bg-clip-text text-transparent">Exclusive Products</span>
         </h1>
-        <div className="h-1 w-24 bg-[#c8a357] mx-auto rounded-full"></div>
+        <div className="h-1 w-20 lg:w-24 bg-[#c8a357] mx-auto rounded-full"></div>
       </div>
 
       {/* MOBILE VIEW: 1 Card at a time Auto-Slider */}
@@ -617,14 +787,15 @@ export default function App() {
           ref={containerRef}
           className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          onTouchStart={handleUserInteraction}
+          onScroll={handleScroll}
         >
           <style>{`.scrollbar-hide::-webkit-scrollbar { display: none; }`}</style>
           
           {products.map((product, index) => (
             <div
               key={product.id}
-              className="w-full flex-shrink-0 snap-center px-6 transition-all duration-500"
-              onClick={() => setActiveIndex(index)}
+              className="w-full flex-shrink-0 snap-center px-4"
             >
               <ProductCard 
                 product={product} 
@@ -636,11 +807,11 @@ export default function App() {
         </div>
 
         {/* Dots Indicator */}
-        <div className="flex justify-center gap-2 mt-8">
+        <div className="flex justify-center gap-2 mt-6">
           {products.map((_, index) => (
             <button
               key={index}
-              onClick={() => setActiveIndex(index)}
+              onClick={() => handleDotClick(index)}
               className={`h-2 rounded-full transition-all duration-300 ${
                 activeIndex === index ? "bg-[#c8a357] w-8" : "bg-gray-600 w-2"
               }`}
@@ -668,16 +839,16 @@ export default function App() {
   );
 }
 
-function ProductCard({ product, isActive, isMobile }) {
+function ProductCard({ product, isActive, isMobile, isDesktop }) {
   return (
-    <div className={`relative h-full overflow-hidden rounded-3xl border transition-all duration-700 ${
+    <div className={`relative h-full overflow-hidden rounded-2xl lg:rounded-3xl transition-all duration-700 ${
       isActive 
-        ? "border-[#c8a357] bg-white/10 shadow-2xl shadow-[#c8a357]/20 scale-100" 
-        : "border-[#c8a357]/10 bg-white/5 scale-95 opacity-60"
-    } p-8`}>
+        ? "bg-white/10 shadow-2xl shadow-[#c8a357]/20 scale-100" 
+        : "bg-white/5 scale-95 opacity-60"
+    } ${isMobile ? 'p-4' : 'p-8'} ${isDesktop ? 'lg:hover:scale-105 lg:hover:shadow-[#c8a357]/40' : ''}`}>
       
       {/* Image */}
-      <div className={`relative flex items-center justify-center mb-6 ${isMobile ? 'h-64' : 'h-80'}`}>
+      <div className={`relative flex items-center justify-center ${isMobile ? 'h-48 mb-4' : 'h-80 mb-6'}`}>
         <img
           src={product.image}
           alt={product.name}
@@ -689,10 +860,14 @@ function ProductCard({ product, isActive, isMobile }) {
 
       {/* Content */}
       <div className="text-center relative z-10">
-        <span className="inline-block text-[10px] font-bold text-[#c8a357] uppercase tracking-widest px-3 py-1 bg-[#c8a357]/10 rounded-full mb-3">
+        <span className={`inline-block font-bold text-[#c8a357] uppercase tracking-widest px-3 py-1 bg-[#c8a357]/10 rounded-full mb-2 lg:mb-3 ${
+          isMobile ? 'text-[9px]' : 'text-[10px]'
+        }`}>
           {product.category}
         </span>
-        <h3 className="text-xl font-bold text-white mb-4">{product.name}</h3>
+        <h3 className={`font-bold text-white ${isMobile ? 'text-base mb-2' : 'text-xl mb-4'}`}>
+          {product.name}
+        </h3>
         <div className={`h-1 bg-[#c8a357] mx-auto rounded-full transition-all duration-500 ${
           isActive ? "w-16" : "w-0"
         }`}></div>
