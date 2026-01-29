@@ -7,7 +7,7 @@ export default function ImageSlider() {
     "/image/Banner2.png",
     "/image/bannner3.png",
     "/image/banner4.png",
-    "/image/banner.png",
+    "/image/Banner.png",
   ];
 
   const [current, setCurrent] = useState(0);
